@@ -1,4 +1,4 @@
-package array;
+package question.array;
 
 /**
  * @description: 寻找数组的中心索引
