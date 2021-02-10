@@ -8,7 +8,7 @@ package question.array;
  * @author: lnzhangsong
  * @time: 2021/1/16 22:11
  */
-public class Q35SearchInsertPosition {
+public class E35SearchInsertPosition {
 
     /**
      * 二分查找

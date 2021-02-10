@@ -9,7 +9,7 @@ package question.array;
  * @author: lnzhangsong
  * @time: 2021/1/15 0:04
  */
-public class Q724FindPivotIndex {
+public class E724FindPivotIndex {
 
     /**
      * 双指针解法 失败 （应该可以出来）
