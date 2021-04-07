@@ -60,11 +60,31 @@ let fun1 = (head) => {
 }
 
 /**
- * 双指针[快慢 前后]
+ * 双指针[快慢 前后] (不知道为啥才击败46？？？？)
  * @param {ListNode} head 头指针
+ * Your runtime beats 46.95 % of javascript submissions
  */
 let fun2 = (head) => {
-    
+    let slow = head; // 慢节点
+    let fast = head; // 快节点
+    let step = 0; // 走的步数
+    // 当前节点 或者下一个节点为空时 slow即是反转的节点 n/2
+    while (fast && fast.next) {  
+        slow = slow.next;
+        fast = fast.next.next;
+        step++;
+    }
+    let tempLink = reserveLink(slow); // 将链表反转 n/2
+    // 逐个对比
+    while (step > 0) {
+        step--;
+        if (head.val !== tempLink.val) {
+            return false;
+        }
+        head = head.next;
+        tempLink = tempLink.next;
+    }
+    return true;
 }
 
 /**
