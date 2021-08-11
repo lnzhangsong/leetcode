@@ -62,6 +62,21 @@ function twoSum2(nums, target) {
     }
     return res;
 }
+
+
+function fun3() {
+    let hashMap = new Map(); // map
+    let res = [];
+    for (let i = 0; i < nums.length; i++) {
+        let res2 = hashMap.get(target - nums[i]);
+        if (res2 || res2 === 0) {
+            return [i, res2];
+        }
+        hashMap.set(nums[i], i);
+    }
+    return res;
+}
+
 // @lc code=end
 
 
