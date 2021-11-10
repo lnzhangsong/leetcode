@@ -48,14 +48,15 @@ var reverseList = function (head) {
  * @return {ListNode} 
  */
 const fun1 = (head) => {
-    // 初始化数据
-    let prev = null;
-    let cur = head;
-    while (cur) { // 结束标志 链表最后一个位置
-        let temp = cur.next;
-        cur.next = prev;
-        prev = cur;
-        cur = temp;
+    let cur = head; // 当前节点
+    let prev = null; // 前节点
+    while (cur !== null) {
+        // 改变指针的指向
+        let nextCur = cur.next; //下一节点
+        cur.next = prev; // 当前节点指向前一节点 .next
+        // 两个指针向后移动
+        prev = cur; // 前节点指向当前节点 直接赋值
+        cur = nextCur; // 当前节点向后移动
     }
     return prev;
 }
